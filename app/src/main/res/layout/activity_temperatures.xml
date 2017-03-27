@@ -1,0 +1,577 @@
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <variable
+            name="telem"
+            type="telemetry.assettocorsa.zotyt.actelemetrymonitor.data.TelemetryData" />
+    </data>
+
+    <FrameLayout
+        android:id="@+id/fullscreen_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#666666"
+        tools:context="telemetry.assettocorsa.zotyt.actelemetrymonitor.TemperaturesActivity">
+
+
+        <!-- The primary full-screen view. This can be replaced with whatever view
+             is needed to present your content, e.g. VideoView, SurfaceView,
+             TextureView, etc. -->
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="1dp"
+                    android:layout_marginRight="1dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/border"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="start|top"
+                        android:layout_marginTop="1dp"
+                        android:layout_weight="4"
+                        android:orientation="horizontal"
+                        android:weightSum="0.9">
+
+                        <TextView
+                            style="@style/font_style"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.15"
+                            android:text="@{telem.frontLeft.outerTemp}"
+                            android:textAlignment="center"
+                            android:textSize="40sp" />
+
+                        <TextView
+                            style="@style/font_style"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.15"
+                            android:text="@{telem.frontLeft.medTemp}"
+                            android:textAlignment="center"
+                            android:textSize="40sp" />
+
+                        <TextView
+                            style="@style/font_style"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.15"
+                            android:text="@{telem.frontLeft.innerTemp}"
+                            android:textAlignment="center"
+                            android:textSize="40sp" />
+
+                        <TextView
+                            style="@style/font_style"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.15"
+                            android:background="@drawable/border_center"
+                            android:text="@{telem.frontRight.innerTemp}"
+                            android:textAlignment="center"
+                            android:textSize="40sp" />
+
+                        <TextView
+                            style="@style/font_style"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.15"
+                            android:text="@{telem.frontRight.medTemp}"
+                            android:textAlignment="center"
+                            android:textSize="40sp" />
+
+                        <TextView
+                            style="@style/font_style"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.15"
+                            android:text="@{telem.frontRight.outerTemp}"
+                            android:textAlignment="center"
+                            android:textSize="40sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="1dp"
+                        android:layout_marginRight="1dp"
+                        android:layout_weight="4"
+                        android:background="@drawable/border_bottom"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/font_style"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.15"
+                            android:text="@{telem.frontLeft.wear}"
+                            android:textAlignment="center"
+                            android:textSize="40sp" />
+
+                        <TextView
+                            style="@style/font_style"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.15"
+                            android:text="@{telem.frontLeft.coreTemp}"
+                            android:textAlignment="center"
+                            android:textSize="40sp" />
+
+                        <TextView
+                            style="@style/font_style"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.15"
+                            android:text="@{telem.frontLeft.pressure}"
+                            android:textAlignment="center"
+                            android:textSize="40sp" />
+
+                        <TextView
+                            style="@style/font_style"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.15"
+                            android:background="@drawable/border_center"
+                            android:text="@{telem.frontRight.pressure}"
+                            android:textAlignment="center"
+                            android:textSize="40sp" />
+
+                        <TextView
+                            style="@style/font_style"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.15"
+                            android:text="@{telem.frontRight.coreTemp}"
+                            android:textAlignment="center"
+                            android:textSize="40sp" />
+
+                        <TextView
+                            style="@style/font_style"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.15"
+                            android:text="@{telem.frontRight.wear}"
+                            android:textAlignment="center"
+                            android:textSize="40sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center|start"
+                        android:layout_weight="4"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/font_style"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.15"
+                            android:text="@{telem.rearLeft.wear}"
+                            android:textAlignment="center"
+                            android:textSize="40sp" />
+
+                        <TextView
+                            style="@style/font_style"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.15"
+                            android:text="@{telem.rearLeft.coreTemp}"
+                            android:textAlignment="center"
+                            android:textSize="40sp" />
+
+                        <TextView
+                            style="@style/font_style"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.15"
+                            android:text="@{telem.rearLeft.pressure}"
+                            android:textAlignment="center"
+                            android:textSize="40sp" />
+
+                        <TextView
+                            style="@style/font_style"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.15"
+                            android:background="@drawable/border_center"
+                            android:text="@{telem.rearRight.pressure}"
+                            android:textAlignment="center"
+                            android:textSize="40sp" />
+
+                        <TextView
+                            style="@style/font_style"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.15"
+                            android:text="@{telem.rearRight.coreTemp}"
+                            android:textAlignment="center"
+                            android:textSize="40sp" />
+
+                        <TextView
+                            style="@style/font_style"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.15"
+                            android:text="@{telem.rearRight.wear}"
+                            android:textAlignment="center"
+                            android:textSize="40sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="1dp"
+                        android:layout_marginRight="1dp"
+                        android:layout_weight="4"
+                        android:background="@drawable/border_bottom"
+                        android:weightSum="0.9">
+
+                        <TextView
+                            style="@style/font_style"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.15"
+                            android:text="@{telem.rearLeft.outerTemp}"
+                            android:textAlignment="center"
+                            android:textSize="40sp" />
+
+                        <TextView
+                            style="@style/font_style"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.15"
+                            android:text="@{telem.rearLeft.medTemp}"
+                            android:textAlignment="center"
+                            android:textSize="40sp" />
+
+                        <TextView
+                            style="@style/font_style"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.15"
+                            android:text="@{telem.rearLeft.innerTemp}"
+                            android:textAlignment="center"
+                            android:textSize="40sp" />
+
+                        <TextView
+                            style="@style/font_style"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.15"
+                            android:background="@drawable/border_center"
+                            android:text="@{telem.rearRight.innerTemp}"
+                            android:textAlignment="center"
+                            android:textSize="40sp" />
+
+                        <TextView
+                            style="@style/font_style"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.15"
+                            android:text="@{telem.rearRight.medTemp}"
+                            android:textAlignment="center"
+                            android:textSize="40sp" />
+
+                        <TextView
+                            style="@style/font_style"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.15"
+                            android:text="@{telem.rearRight.outerTemp}"
+                            android:textAlignment="center"
+                            android:textSize="40sp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="5"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/textView4"
+                                    style="@style/font_style"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:text="Tyre Datas"
+                                    android:textAlignment="gravity"
+                                    android:textSize="20sp" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="5"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    style="@style/font_style"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:text="Brake Temps"
+                                    android:textAlignment="gravity"
+                                    android:textSize="20sp" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginBottom="40dp"
+                                android:layout_weight="2"
+                                android:background="@drawable/border"
+                                android:gravity="center_horizontal|center"
+                                android:orientation="vertical">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_gravity="center_horizontal|center"
+                                    android:layout_weight="1"
+                                    android:orientation="horizontal">
+
+                                    <TextView
+                                        android:id="@+id/textView6"
+                                        style="@style/font_style"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="1"
+                                        android:text="@{telem.frontLeft.brakeTemperature}"
+                                        android:textAlignment="center"
+                                        android:textSize="50sp" />
+
+                                    <TextView
+                                        android:id="@+id/textView5"
+                                        style="@style/font_style"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="1"
+                                        android:text="@{telem.frontRight.brakeTemperature}"
+                                        android:textAlignment="center"
+                                        android:textSize="50sp" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_gravity="center"
+                                    android:layout_weight="1"
+                                    android:orientation="horizontal">
+
+                                    <TextView
+                                        android:id="@+id/textView8"
+                                        style="@style/font_style"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="1"
+                                        android:text="@{telem.rearLeft.brakeTemperature}"
+                                        android:textAlignment="center"
+                                        android:textSize="50sp" />
+
+                                    <TextView
+                                        android:id="@+id/textView7"
+                                        style="@style/font_style"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="1"
+                                        android:text="@{telem.rearRight.brakeTemperature}"
+                                        android:textAlignment="center"
+                                        android:textSize="50sp" />
+                                </LinearLayout>
+                            </LinearLayout>
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    tools:layout_marginStart="10dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="end|top"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:id="@+id/textView"
+                            style="@style/font_style"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.2"
+                            android:text="Curr Laptime:"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            style="@style/font_style"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="3:21:000"
+                            android:textSize="40sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/font_style"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.2"
+                            android:text="Best Laptime:"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            style="@style/font_style"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="3:21:000"
+                            android:textSize="40sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/font_style"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.2"
+                            android:text="Last Laptime:"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            style="@style/font_style"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="3:21:000"
+                            android:textSize="40sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/font_style"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.2"
+                            android:text="Delta:"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            style="@style/font_style"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@{telem.performanceMeter}"
+                            android:textSize="40sp"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="horizontal"></LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="horizontal"></LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="horizontal"></LinearLayout>
+
+                </LinearLayout>
+            </LinearLayout>
+
+
+        </RelativeLayout>
+        <!-- This FrameLayout insets its children based on system windows using
+             android:fitsSystemWindows. -->
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fitsSystemWindows="true">
+
+            <LinearLayout
+                android:id="@+id/fullscreen_content_controls"
+                style="?metaButtonBarStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|center_horizontal"
+                android:background="@color/black_overlay"
+                android:orientation="horizontal"
+                tools:ignore="UselessParent">
+
+                <Button
+                    android:id="@+id/connect_button"
+                    style="?metaButtonBarButtonStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/connect_button" />
+
+            </LinearLayout>
+        </FrameLayout>
+
+    </FrameLayout>
+</layout>

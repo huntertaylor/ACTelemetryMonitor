@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">ACTelemetryMonitor</string>
+
+    <string name="connect_button">Connect to ACTI Server</string>
+</resources>
